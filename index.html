@@ -1,47 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Page Title</title>
-    <script>
-      function getResult() {
-        objetiveExam = 0;
-        title = document.getElementById("title").value;
-        finalResult = document.getElementById("nf").value;
-        objetiveExam = (finalResult * 10 - title * 2) / 8;
-        document.getElementById("result").innerText = objetiveExam / 2;
-      }
-    </script>
-    <style>
-      body {
-        background: white;
-        color: #323232;
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: Helvetica neue, roboto;
-      }
-
-      .content {
-        margin-bottom: 1rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="content">
-      <p class="placeholder">Nota Final</p>
-      <input id="nf" type="number" />
-    </div>
-
-    <div class="content">
-      <p class="placeholder">Titulos</p>
-      <input id="title" type="number" />
-    </div>
-
-    <button onclick="getResult()">Calcular</button>
-
-    <p id="result"></p>
-  </body>
+    <title>Simulador</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <body>
+        <content class="content-cards">
+            <div class="card">
+                <div class="w3-black w3-opacity w3-padding-large w3-round-large">
+                    <h1 class="w3-xlarge">Insira as notas abaixo pra calcular a quantidade de questões acertadas</h1>
+                    <hr class="w3-opacity">
+                    <p class="placeholder">Nota Final:</p>
+                    <input id="nf" type="number" />
+                    <p class="placeholder">Titulos:</p>
+                    <input id="title" type="number" />
+                    <p><button class="w3-button w3-block w3-green w3-round" onclick="getResult()">Calcular</button></p>
+                </div>
+            </div>
+            <div class="history w3-black w3-opacity w3-padding-large w3-round-large">
+                <h1 class="w3-xlarge">Histórico:</h1>
+                <div class="results"></div>
+                <p><button class="w3-button w3-block w3-green w3-round" onclick="cleanHistory()">Limpar</button></p>
+            </div>
+        </content>
+    </body>
 </html>
