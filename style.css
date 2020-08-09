@@ -35,3 +35,17 @@ input {
     overflow: auto;
 }
 
+@media screen and (max-width: 650px) {
+    content {
+       flex-direction: column;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .history {
+        width: 80%;
+    }
+
+  }
