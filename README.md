@@ -1,2 +1,2 @@
 # simulator.io
-Simulador de notas para mestrado
+Calculadora de notas para mestrado
